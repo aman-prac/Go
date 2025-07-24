@@ -1,13 +1,14 @@
 package main
 
 import (
+	"fmt"
 	"testing"
 )
 
 func TestFactLoop(t *testing.T) {
 	n := 5
 	expected := 120
-	result := factLoop(n)
+	result := FactLoop(n)
 	if result != expected {
 		t.Errorf("factLoop(%d) = %d; want %d", n, result, expected)
 	}
@@ -16,7 +17,7 @@ func TestFactLoop(t *testing.T) {
 func TestFactRec(t *testing.T) {
 	n := 5
 	expected := 120
-	result := factRec(n)
+	result := FactRec(n)
 	if result != expected {
 		t.Errorf("factRec(%d) = %d; want %d", n, result, expected)
 	}
@@ -24,13 +25,13 @@ func TestFactRec(t *testing.T) {
 
 func BenchmarkFactLoop(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		factLoop(20)
+		FactLoop(20)
 	}
 }
 
 func BenchmarkFactRec(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		factRec(20)
+		FactRec(20)
 	}
 }
 
@@ -51,17 +52,31 @@ func TestFactorialFunctions(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name+" using loop", func(t *testing.T) {
-			result := factLoop(tt.n)
+			result := FactLoop(tt.n)
 			if result != tt.expected {
 				t.Errorf("factLoop(%d) = %d; want %d", tt.n, result, tt.expected)
 			}
 		})
 
 		t.Run(tt.name+" using recursion", func(t *testing.T) {
-			result := factRec(tt.n)
+			result := FactRec(tt.n)
 			if result != tt.expected {
 				t.Errorf("factRec(%d) = %d; want %d", tt.n, result, tt.expected)
 			}
 		})
 	}
+}
+
+func ExampleFactLoop() {
+	n := 5
+	result := FactLoop(n)
+	fmt.Println(result)
+	// Output: 120
+}
+
+func ExampleFactRec() {
+	n := 5
+	result := FactRec(n)
+	fmt.Println(result)
+	// Output: 120
 }
