@@ -25,21 +25,21 @@ func FactRec(n int) int {
 	return n * FactRec(n-1)
 }
 
-// // Test cases for factorial functions-- loop
-// func ExampleFactLoop() {
-// 	n := 5
-// 	result := factLoop(n)
-// 	fmt.Println(result)
-// 	// Output: 120
-// }
+// Test cases for factorial functions-- loop
+func ExampleFactLoop() {
+	n := 5
+	result := factLoop(n)
+	fmt.Println(result)
+	// Output: 120
+}
 
-// // Test cases for factorial functions-- recursion
-// func ExampleFactRec() {
-// 	n := 5
-// 	result := factRec(n)
-// 	fmt.Println(result)
-// 	// Output: 120
-// }
+// Test cases for factorial functions-- recursion
+func ExampleFactRec() {
+	n := 5
+	result := factRec(n)
+	fmt.Println(result)
+	// Output: 120
+}
 
 func main() {
 	n := 11

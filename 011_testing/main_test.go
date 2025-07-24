@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -67,16 +66,16 @@ func TestFactorialFunctions(t *testing.T) {
 	}
 }
 
-func ExampleFactLoop() {
-	n := 5
-	result := FactLoop(n)
-	fmt.Println(result)
-	// Output: 120
-}
+// func ExampleFactLoop() {
+// 	n := 5
+// 	result := FactLoop(n)
+// 	fmt.Println(result)
+// 	// Output: 120
+// }
 
-func ExampleFactRec() {
-	n := 5
-	result := FactRec(n)
-	fmt.Println(result)
-	// Output: 120
-}
+// func ExampleFactRec() {
+// 	n := 5
+// 	result := FactRec(n)
+// 	fmt.Println(result)
+// 	// Output: 120
+// }
