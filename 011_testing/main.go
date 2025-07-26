@@ -28,7 +28,7 @@ func FactRec(n int) int {
 // Test cases for factorial functions-- loop
 func ExampleFactLoop() {
 	n := 5
-	result := factLoop(n)
+	result := FactLoop(n)
 	fmt.Println(result)
 	// Output: 120
 }
@@ -36,7 +36,7 @@ func ExampleFactLoop() {
 // Test cases for factorial functions-- recursion
 func ExampleFactRec() {
 	n := 5
-	result := factRec(n)
+	result := FactRec(n)
 	fmt.Println(result)
 	// Output: 120
 }
